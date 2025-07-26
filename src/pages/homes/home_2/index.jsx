@@ -1,4 +1,4 @@
-import Blog4 from "@/components/blog/Blog4";
+
 import Brand2 from "@/components/brand/Brand2";
 import Footer2 from "@/components/footer/footer-2";
 import Header2 from "@/components/header/header-2";
@@ -10,7 +10,6 @@ import Subscribe from "@/components/home/home-2/Subscribe";
 import Testimonial from "@/components/home/home-2/Testimonial";
 import TestimonialRating from "@/components/home/home-2/TestimonialRating";
 import Travellers from "@/components/home/home-2/Travellers";
-import FilterHotels3 from "@/components/hotels/FilterHotels3";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -87,9 +86,6 @@ const Home_2 = () => {
         {/* End .container */}
       </section>
       {/* End Connect with Travellers Sections */}
-      <FilterHotels3 />
-
-      {/* End Best Seller Hotels Sections */}
 
       <section className="layout-pt-lg layout-pb-lg bg-dark-3">
         <div className="container">
@@ -139,10 +135,6 @@ const Home_2 = () => {
             </div>
           </div>
           {/* End .row  */}
-          <div className="row y-gap-30 pt-40">
-            <Blog4 />
-          </div>
-          {/* End .row */}
         </div>
         {/* End .container */}
       </section>
