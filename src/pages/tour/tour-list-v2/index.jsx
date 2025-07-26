@@ -1,5 +1,5 @@
 import CallToActions from "@/components/common/CallToActions";
-import Header11 from "@/components/header/header-11";
+import Header2 from "@/components/header/header-2";
 import DefaultFooter from "@/components/footer/default";
 import TopHeaderFilter from "@/components/tour-list/tour-list-v2/TopHeaderFilter";
 import TourProperties from "@/components/tour-list/tour-list-v2/TourProperties";
@@ -22,8 +22,8 @@ const TourListPage2 = () => {
       <div className="header-margin"></div>
       {/* header top margin */}
 
-      <Header11 />
-      {/* End Header 1 */}
+      <Header2 />
+      {/* End Header 2 */}
 
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
