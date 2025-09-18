@@ -44,7 +44,8 @@ const MobileMenu = () => {
     <>
       <div className="pro-header d-flex align-items-center justify-between border-bottom-light">
         <Link to="/">
-          <img src="/img/general/logo-dark.svg" alt="brand" />
+          {/* <img src="/img/general/logo-dark.svg" alt="brand" /> */}
+          <h1 className="text-dark-1 text-22">PawwfectStay</h1>
         </Link>
         {/* End logo */}
 

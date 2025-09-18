@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
-import LanguageMegaMenu from "../LanguageMegaMenu";
-import LocationSearch from "./LocationSearch";
 import MobileMenu from "../MobileMenu";
 
 const Header1 = () => {
@@ -61,15 +58,12 @@ const Header1 = () => {
                 {/* End mobile humberger menu */}
 
                 <Link to="/" className="header-logo mr-20">
-                  <img src="/img/general/logo-light-2.svg" alt="logo icon" />
-                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                  {/* <img src="/img/general/logo-light-2.svg" alt="logo icon" />
+                  <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
+                  <h1 className="text-white text-22">PawwfectStay</h1>
                 </Link>
                 {/* End logo */}
 
-                <div className="relative xl:d-none">
-                  <LocationSearch />
-                </div>
-                {/* End Search box */}
               </div>
               {/* End d-flex */}
             </div>
@@ -77,20 +71,6 @@ const Header1 = () => {
 
             <div className="col-auto">
               <div className="d-flex items-center">
-                <div className="row x-gap-20 items-center xxl:d-none">
-                  <CurrenctyMegaMenu textClass="text-white" />
-                  {/* End Megamenu for Currencty */}
-
-                  {/* Start vertical devider*/}
-                  <div className="col-auto">
-                    <div className="w-1 h-20 bg-white-20" />
-                  </div>
-                  {/* End vertical devider*/}
-
-                  <LanguageMegaMenu textClass="text-white" />
-                  {/* End Megamenu for Language */}
-                </div>
-                {/* End language and currency selector */}
 
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">

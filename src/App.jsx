@@ -26,15 +26,6 @@ import LogIn from "./pages/others/login";
 import SignUp from "./pages/others/signup";
 import Terms from "./pages/others/terms";
 import Invoice from "./pages/others/invoice";
-import DBDashboard from "./pages/dashboard/dashboard/db-dashboard";
-import DBBooking from "./pages/dashboard/dashboard/db-booking";
-import DBWishlist from "./pages/dashboard/dashboard/db-wishlist";
-import DBSettings from "./pages/dashboard/dashboard/db-settings";
-import VendorAddHotel from "./pages/dashboard/vendor-dashboard/add-hotel";
-import VendorBooking from "./pages/dashboard/vendor-dashboard/booking";
-import BVVendorHotel from "./pages/dashboard/vendor-dashboard/hotels";
-import BDVendorRecovery from "./pages/dashboard/vendor-dashboard/recovery";
-import VendorDashboard from "./pages/dashboard/vendor-dashboard/dashboard";
 
 import TourListPage2 from "./pages/tour/tour-list-v2";
 import TourSingleV1Dynamic from "./pages/tour/tour-single";
@@ -70,21 +61,6 @@ function App() {
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
               <Route path="destinations" element={<Destinations />} />
-
-              <Route path="dashboard">
-                <Route path="db-dashboard" element={<DBDashboard />} />
-                <Route path="db-booking" element={<DBBooking />} />
-                <Route path="db-wishlist" element={<DBWishlist />} />
-                <Route path="db-settings" element={<DBSettings />} />
-              </Route>
-
-              <Route path="vendor-dashboard">
-                <Route path="dashboard" element={<VendorDashboard />} />
-                <Route path="add-hotel" element={<VendorAddHotel />} />
-                <Route path="booking" element={<VendorBooking />} />
-                <Route path="hotels" element={<BVVendorHotel />} />
-                <Route path="recovery" element={<BDVendorRecovery />} />
-              </Route>
 
               <Route path="tour-list-v2" element={<TourListPage2 />} />
               <Route path="tour-single/:id" element={<TourSingleV1Dynamic />} />
