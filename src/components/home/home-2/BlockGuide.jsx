@@ -2,21 +2,21 @@ const BlockGuide = () => {
   const blockContent = [
     {
       id: 1,
-      icon: "/img/featureIcons/2/1.svg",
+      // icon: "/img/featureIcons/2/1.svg",
       title: "Best Price Guarantee",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
       delayAnim: "0",
     },
     {
       id: 2,
-      icon: "/img/featureIcons/2/2.svg",
+      // icon: "/img/featureIcons/2/2.svg",
       title: "Easy & Quick Booking",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
       delayAnim: "50",
     },
     {
       id: 3,
-      icon: "/img/featureIcons/2/3.svg",
+      // icon: "/img/featureIcons/2/3.svg",
       title: "Customer Care 24/7",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
       delayAnim: "100",
@@ -34,7 +34,7 @@ const BlockGuide = () => {
         >
           <div className="featureIcon -type-1 -hover-shadow px-50 py-50 lg:px-24 lg:py-15">
             <div className="d-flex justify-center">
-              <img src={item.icon} alt="image" className="js-lazy" />
+              {/* <img src={item.icon} alt="image" className="js-lazy" /> */}
             </div>
             <div className="text-center mt-30">
               <h4 className="text-18 fw-500">{item.title}</h4>

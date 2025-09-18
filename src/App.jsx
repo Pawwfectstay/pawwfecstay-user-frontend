@@ -19,9 +19,6 @@ import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
 import Home from "./pages";
 import Home_2 from "./pages/homes/home_2";
 import NotFoundPage from "./pages/not-found";
-import About from "./pages/others/about";
-import BecomeExpert from "./pages/others/become-expert";
-import HelpCenter from "./pages/others/help-center";
 import LogIn from "./pages/others/login";
 import SignUp from "./pages/others/signup";
 import Terms from "./pages/others/terms";
@@ -30,7 +27,6 @@ import Invoice from "./pages/others/invoice";
 import TourListPage2 from "./pages/tour/tour-list-v2";
 import TourSingleV1Dynamic from "./pages/tour/tour-single";
 import Contact from "./pages/others/contact";
-import Destinations from "./pages/others/destinations";
 
 function App() {
   useEffect(() => {
@@ -52,15 +48,11 @@ function App() {
               <Route path="404" element={<NotFoundPage />} />
               <Route path="*" element={<NotFoundPage />} />
 
-              <Route path="about" element={<About />} />
-              <Route path="become-expert" element={<BecomeExpert />} />
-              <Route path="help-center" element={<HelpCenter />} />
               <Route path="signup" element={<SignUp />} />
               <Route path="login" element={<LogIn />} />
               <Route path="terms" element={<Terms />} />
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
-              <Route path="destinations" element={<Destinations />} />
 
               <Route path="tour-list-v2" element={<TourListPage2 />} />
               <Route path="tour-single/:id" element={<TourSingleV1Dynamic />} />
