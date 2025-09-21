@@ -1,4 +1,10 @@
-import apiClient from './config';
+import apiClient, { setAuthToken } from './config';
+
+// Helper to get user ID from session
+const getUserFromSession = () => {
+  const userStr = sessionStorage.getItem('user');
+  return userStr ? JSON.parse(userStr) : null;
+};
 
 // Booking-related API calls
 export const bookingApi = {

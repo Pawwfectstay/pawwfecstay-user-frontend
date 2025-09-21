@@ -1,4 +1,4 @@
-import apiClient from './config';
+import apiClient, { setAuthToken } from './config';
 
 export const paymentsApi = {
   // Submit payment

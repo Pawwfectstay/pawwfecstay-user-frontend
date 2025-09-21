@@ -1,4 +1,4 @@
-import apiClient from './config';
+import apiClient, { setAuthToken } from './config';
 
 export const shopsApi = {
   // Get all shops with room types

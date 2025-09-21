@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MobileMenu from "../MobileMenu";
+import { userApi } from "@/api";
 
 const Header1 = () => {
+  const navigate = useNavigate();
   const [navbar, setNavbar] = useState(false);
+  const [user, setUser] = useState(null);
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -14,11 +17,29 @@ const Header1 = () => {
   };
 
   useEffect(() => {
+    // Add scroll listener
     window.addEventListener("scroll", changeBackground);
+
+    // Check for user data in session
+    const userData = sessionStorage.getItem('user');
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+
     return () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
+
+  const handleLogout = async () => {
+    try {
+      await userApi.logout();
+      setUser(null);
+      navigate('/login');
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
 
   return (
     <>
@@ -74,18 +95,34 @@ const Header1 = () => {
 
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  <Link
-                    to="/login"
-                    className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
-                  >
-                    Become An Expert
-                  </Link>
-                  <Link
-                    to="/signup"
-                    className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                  >
-                    Sign In / Register
-                  </Link>
+                  {user ? (
+                    <div className="d-flex items-center">
+                      <span className="text-white mr-20">
+                        Welcome, {user.first_name} {user.last_name}
+                      </span>
+                      <button
+                        onClick={handleLogout}
+                        className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
+                      >
+                        Logout
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <Link
+                        to="/login"
+                        className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
+                      >
+                        Become An Expert
+                      </Link>
+                      <Link
+                        to="/signup"
+                        className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                      >
+                        Sign In / Register
+                      </Link>
+                    </>
+                  )}
                 </div>
                 {/* End btn-group */}
               </div>

@@ -1,17 +1,33 @@
-import apiClient from './config';
+import apiClient, { setAuthToken } from './config';
 
 // User-related API calls
 export const userApi = {
   // Login user
   login: async ({ email, password }) => {
     try {
-      const response = await apiClient.post('/api/users/login', { email, password });
-      // Store token if returned from API
-      if (response.data?.token) {
-        localStorage.setItem('token', response.data.token);
+      console.log('Sending login request with:', { email, password });
+      
+      const response = await apiClient.post('/api/users/login', {
+        email,
+        password
+      });
+      
+      console.log('Raw API Response:', response);
+      
+      // Check if we have a token in the response
+      const token = response?.token || response?.data?.token;
+      
+      if (token) {
+        console.log('Token received, setting auth token');
+        setAuthToken(token);
+        return { success: true, token };
+      } else {
+        console.log('No token in response:', response);
+        throw new Error('No token received from server');
       }
-      return response.data;
     } catch (error) {
+      console.error('Login failed:', error.response || error);
+      setAuthToken(null);
       throw error;
     }
   },
@@ -19,15 +35,16 @@ export const userApi = {
   // Logout user
   logout: async () => {
     try {
-      await apiClient.post('/api/users/logout');
-      // Clear stored token and any user data
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-    } catch (error) {
-      // Still clear local storage even if API call fails
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      throw error;
+      // Token will be automatically added by the interceptor
+      console.log('Logging out with token:', sessionStorage.getItem('token'));
+      const response = await apiClient.post('/api/users/logout');
+      console.log('Logout response:', response);
+      return response;
+    } finally {
+      // Always clear tokens and user data
+      console.log('Clearing session data...');
+      setAuthToken(null);
+      sessionStorage.removeItem('user');
     }
   },
 
@@ -50,13 +67,17 @@ export const userApi = {
   // Get user profile
   getProfile: async () => {
     try {
-      const response = await apiClient.get('/api/users/');
-      // Store user data if needed
+      console.log('Fetching user profile...');
+      const response = await apiClient.get('/api/users');
+      console.log('User profile response:', response);
+      
+      // Store user data in session
       if (response.data) {
-        localStorage.setItem('user', JSON.stringify(response.data));
+        sessionStorage.setItem('user', JSON.stringify(response.data));
       }
       return response.data;
     } catch (error) {
+      console.error('Failed to fetch user profile:', error);
       throw error;
     }
   },
