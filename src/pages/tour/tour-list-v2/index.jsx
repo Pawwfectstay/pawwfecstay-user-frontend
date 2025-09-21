@@ -13,7 +13,25 @@ const metadata = {
   description: "GoTrip - Travel & Tour ReactJs Template",
 };
 
+import { useState, useCallback } from 'react';
+
 const TourListPage2 = () => {
+  // State for filters and sorting
+  const [filters, setFilters] = useState({});
+  const [sortConfig, setSortConfig] = useState({ key: 'price', direction: 'asc' });
+
+  // Memoized filter handlers
+  const handleFilterChange = useCallback((newFilters) => {
+    setFilters(prev => ({ ...prev, ...newFilters }));
+  }, []);
+
+  // Memoized sort handler
+  const handleSortChange = useCallback((key) => {
+    setSortConfig(prev => ({
+      key,
+      direction: prev.key === key && prev.direction === 'asc' ? 'desc' : 'asc'
+    }));
+  }, []);
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -64,11 +82,11 @@ const TourListPage2 = () => {
             {/* End col */}
 
             <div className="col-xl-9 ">
-              <TopHeaderFilter />
+              <TopHeaderFilter onSortChange={handleSortChange} sortConfig={sortConfig} />
               <div className="mt-30"></div>
               {/* End mt--30 */}
               <div className="row y-gap-30">
-                <TourProperties />
+                <TourProperties filters={filters} sortConfig={sortConfig} />
               </div>
               {/* End .row */}
               <Pagination />

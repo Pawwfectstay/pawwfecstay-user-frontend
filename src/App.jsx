@@ -1,5 +1,5 @@
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import SrollTop from "./components/common/ScrollTop";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,17 +16,17 @@ if (typeof window !== "undefined") {
 }
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
-import Home from "./pages";
-import Home_2 from "./pages/homes/home_2";
-import NotFoundPage from "./pages/not-found";
-import LogIn from "./pages/others/login";
-import SignUp from "./pages/others/signup";
-import Terms from "./pages/others/terms";
-import Invoice from "./pages/others/invoice";
-
-import TourListPage2 from "./pages/tour/tour-list-v2";
-import TourSingleV1Dynamic from "./pages/tour/tour-single";
-import Contact from "./pages/others/contact";
+// Lazy load all routes
+const Home = lazy(() => import("./pages"));
+const Home_2 = lazy(() => import("./pages/homes/home_2"));
+const NotFoundPage = lazy(() => import("./pages/not-found"));
+const LogIn = lazy(() => import("./pages/others/login"));
+const SignUp = lazy(() => import("./pages/others/signup"));
+const Terms = lazy(() => import("./pages/others/terms"));
+const Invoice = lazy(() => import("./pages/others/invoice"));
+const TourListPage2 = lazy(() => import("./pages/tour/tour-list-v2"));
+const TourSingleV1Dynamic = lazy(() => import("./pages/tour/tour-single"));
+const Contact = lazy(() => import("./pages/others/contact"));
 
 function App() {
   useEffect(() => {
@@ -40,6 +40,7 @@ function App() {
     <main>
       <Provider store={store}>
         <BrowserRouter>
+          <Suspense fallback={<div className="preloader">Loading...</div>}>
           <Routes>
             <Route path="/">
               <Route index element={<Home />} />
@@ -59,6 +60,7 @@ function App() {
 
             </Route>
           </Routes>
+          </Suspense>
           <ScrollTopBehaviour />
         </BrowserRouter>
 
