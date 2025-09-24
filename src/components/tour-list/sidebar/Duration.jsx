@@ -1,14 +1,17 @@
-const Duration = () => {
-  const durationOptions = [
-    { label: "Up to 1 hour", count: 92 },
-    { label: "1 to 4 hours", count: 45 },
-    { label: "4 hours to 1 day", count: 21 },
+const Amenities = () => {
+  const amenityOptions = [
+    { label: "Air Conditioning", count: 35 },
+    { label: "Webcam Access", count: 28 },
+    { label: "Play Area", count: 25 },
+    { label: "Grooming Station", count: 20 },
+    { label: "Medical Support", count: 15 },
+    { label: "24/7 Staff", count: 30 },
   ];
 
   return (
     <>
-      {durationOptions.map((option, index) => (
-        <div className="row y-gap-10 items-center justify-between" key={index}>
+      {amenityOptions.map((option) => (
+        <div className="row y-gap-10 items-center justify-between" key={option.label}>
           <div className="col-auto">
             <div className="form-checkbox d-flex items-center">
               <input type="checkbox" name="name" />
@@ -27,4 +30,4 @@ const Duration = () => {
   );
 };
 
-export default Duration;
+export default Amenities;

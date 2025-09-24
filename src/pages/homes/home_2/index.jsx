@@ -9,7 +9,7 @@ import CallToActions from "@/components/home/home-2/CallToActions";
 import Subscribe from "@/components/home/home-2/Subscribe";
 import Testimonial from "@/components/home/home-2/Testimonial";
 import TestimonialRating from "@/components/home/home-2/TestimonialRating";
-import Travellers from "@/components/home/home-2/Travellers";
+import Facilities from "@/components/home/home-2/Facilities";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -37,7 +37,7 @@ const Home_2 = () => {
           </div>
         </div>
       </section>
-      {/* End travel block sections */}
+      {/* End pet care services block sections */}
 
       <section className="layout-pt-md layout-pb-md">
         <div className="container">
@@ -45,10 +45,10 @@ const Home_2 = () => {
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">
-                  Connect With Other Travellers
+                  Featured Pet Boarding Services
                 </h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
+                  Discover top-rated pet care facilities near you
                 </p>
               </div>
             </div>
@@ -80,12 +80,12 @@ const Home_2 = () => {
           </div>
           {/* End .row */}
 
-          <Travellers />
+          <Facilities />
           {/* End travellers component */}
         </div>
         {/* End .container */}
       </section>
-      {/* End Connect with Travellers Sections */}
+      {/* End Featured Pet Boarding Services Section */}
 
       <section className="layout-pt-lg layout-pb-lg bg-dark-3">
         <div className="container">
@@ -105,7 +105,7 @@ const Home_2 = () => {
           <div className="row justify-center text-center pt-60">
             <div className="col-auto">
               <div className="text-15 lh-1 text-white">
-                Trusted by the world’s best
+                Trusted by Pet Parents Everywhere
               </div>
             </div>
           </div>
@@ -126,10 +126,10 @@ const Home_2 = () => {
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">
-                  Get inspiration for your next trip
+                  Why Choose PawwfectStay?
                 </h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames
+                  Your pets deserve the best care while you're away
                 </p>
               </div>
             </div>
@@ -138,12 +138,12 @@ const Home_2 = () => {
         </div>
         {/* End .container */}
       </section>
-      {/* End blog Section */}
+      {/* End Why Choose Us Section */}
 
       <Subscribe />
       {/* End Subscribe Section */}
 
-      <AppBanner />
+      {/* <AppBanner /> */}
       {/* End AppBanner Section */}
 
       <CallToActions />

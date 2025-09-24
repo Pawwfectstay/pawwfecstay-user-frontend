@@ -2,151 +2,81 @@ export const testimonial1 = [
   {
     id: 1,
     avatar: "/img/avatars/testimonials/1.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `The place is in a great location in Gumbet. The area is safe and
-        beautiful. The apartment was comfortable and the host was kind and
-        responsive to our requests. Really a nice place.`,
+    name: "Sarah Tan",
+    designation: "Pet Parent of Luna",
+    text: "Amazing experience! The staff were so caring with my Golden Retriever. Will definitely book again!",
     dealyAnimation: "100",
   },
   {
     id: 2,
     avatar: "/img/avatars/testimonials/2.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `The place is in a great location in Gumbet. The area is safe and
-        beautiful. The apartment was comfortable and the host was kind and
-        responsive to our requests. Really a nice place.`,
+    name: "Ahmad Razak",
+    designation: "Pet Parent of Comel",
+    text: "Great care for my cat during her stay. The facilities are top-notch and they were very attentive.",
     dealyAnimation: "200",
   },
   {
     id: 3,
     avatar: "/img/avatars/testimonials/3.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `The place is in a great location in Gumbet. The area is safe and
-        beautiful. The apartment was comfortable and the host was kind and
-        responsive to our requests. Really a nice place.`,
+    name: "Michelle Wong",
+    designation: "Pet Parent of Max & Bella",
+    text: "The play areas are huge, and they separate small and large dogs. My babies came back happy!",
     dealyAnimation: "300",
   },
   {
     id: 4,
-    avatar: "/img/avatars/testimonials/1.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `The place is in a great location in Gumbet. The area is safe and
-        beautiful. The apartment was comfortable and the host was kind and
-        responsive to our requests. Really a nice place.`,
-    dealyAnimation: "400",
-  },
-];
-export const testimonial2 = [
-  {
-    id: 1,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/avatars/testimonials/1.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
-    dealyAnimation: "100",
-  },
-  {
-    id: 2,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/avatars/testimonials/2.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
-    dealyAnimation: "200",
-  },
-  {
-    id: 3,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/avatars/testimonials/3.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
-    dealyAnimation: "300",
-  },
-  {
-    id: 4,
-    meta: "Hotel Equatorial Melaka",
     avatar: "/img/avatars/testimonials/4.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    name: "Raj Kumar",
+    designation: "Pet Parent of Rocky",
+    text: "Best pet boarding service in KL! They handled my anxious German Shepherd with such patience.",
     dealyAnimation: "400",
-  },
-  {
-    id: 5,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/avatars/testimonials/5.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
-    dealyAnimation: "500",
   },
 ];
 
-export const testimonial3 = [
+export const testimonial2 = [
   {
     id: 1,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/testimonials/2/1.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    meta: "Pet Safari - Sunway Pyramid",
+    avatar: "/img/avatars/testimonials/1.png",
+    name: "Sarah Tan",
+    designation: "Pet Parent of Luna",
+    text: "Amazing experience at Pet Safari! The staff were so caring with my Golden Retriever, Luna. The facilities are clean and spacious. The daily photo updates gave me peace of mind during my business trip. Will definitely book again!",
+    dealyAnimation: "100",
   },
   {
     id: 2,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/testimonials/2/2.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    meta: "Paws & Claws Veterinary Clinic",
+    avatar: "/img/avatars/testimonials/2.png",
+    name: "Ahmad Razak",
+    designation: "Pet Parent of Comel",
+    text: "Excellent care for my cat. The staff are very professional and attentive.",
+    dealyAnimation: "200",
   },
   {
     id: 3,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/testimonials/2/3.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    meta: "Pawfect Haven Damansara",
+    avatar: "/img/avatars/testimonials/3.png",
+    name: "Michelle Wong",
+    designation: "Pet Parent of Max & Bella",
+    text: "Great experience! The play areas are perfect and they take good care of the pets.",
+    dealyAnimation: "300",
   },
   {
     id: 4,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/testimonials/2/4.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    meta: "Pet Family Veterinary Clinic",
+    avatar: "/img/avatars/testimonials/4.png",
+    name: "Raj Kumar",
+    designation: "Pet Parent of Rocky",
+    text: "Professional service and great communication throughout the stay.",
+    dealyAnimation: "400",
   },
   {
     id: 5,
-    meta: "Hotel Equatorial Melaka",
-    avatar: "/img/testimonials/2/5.png",
-    name: "Annette Black",
-    designation: "UX / UI Designer",
-    text: `"Our family was traveling via bullet train between cities in
-    Japan with our luggage - the location for this hotel made that so
-    easy. Agoda price was fantastic."`,
+    meta: "Luxury Pets  TTDI",
+    avatar: "/img/avatars/testimonials/5.png",
+    name: "Lisa Chen",
+    designation: "Pet Parent of Milo",
+    text: "Premium service with great facilities. My Shih Tzu was well taken care of.",
+    dealyAnimation: "500",
   },
 ];

@@ -1,26 +1,38 @@
 import { useMemo } from 'react';
-import toursData from "../../../data/tours";
 import TourCard from './TourCard';
-import { useFilteredData, useSortedData } from '../../../utils/optimizationHooks';
+import { useLocation } from 'react-router-dom';
 
 const TourProperties = ({ filters, sortConfig }) => {
-  // Memoize the initial data slice
-  const initialTours = useMemo(() => toursData.slice(0, 9), []);
+  const location = useLocation();
+  const searchResults = location.state?.searchResults || [];
 
-  // Apply filters and sorting with memoization
-  const filteredTours = useFilteredData(initialTours, filters);
-  const sortedTours = useSortedData(filteredTours, sortConfig);
+  // Memoize the shop data
+  const shopData = useMemo(() => {
+    return searchResults.map(shop => ({
+      id: shop.shop_id,
+      name: shop.name,
+      location: `${shop.address}, ${shop.city}, ${shop.state}`,
+      roomTypes: shop.room_types.map(type => ({
+        id: type.room_type_id,
+        type: type.type,
+        price: type.price,
+        description: type.description,
+        maxOccupancy: type.max_occupancy,
+        availableRooms: type.available_rooms,
+        images: type.images
+      }))
+    }));
+  }, [searchResults]);
 
   return (
     <>
-      {sortedTours.map((item) => (
+      {shopData.map((shop) => (
         <div
           className="col-lg-4 col-sm-6"
-          key={item?.id}
+          key={shop.id}
           data-aos="fade"
-          data-aos-delay={item?.delayAnimation}
         >
-          <TourCard item={item} />
+          <TourCard item={shop} />
         </div>
       ))}
     </>

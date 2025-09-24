@@ -28,7 +28,7 @@ const Index = () => {
   return (
     <section className="masthead -type-2 z-2">
       <div className="masthead__bg bg-dark-3">
-        <img alt="image" src="/img/masthead/2/bg.png" className="js-lazy" />
+        <img alt="image" src="/img/masthead/bg.png" className="js-lazy" />
       </div>
       {/* End bg image */}
 
@@ -72,7 +72,7 @@ const Index = () => {
               <div className="masthead__images relative-1">
                 <div data-aos="fade" data-aos-delay="400">
                   <img
-                    src="/img/masthead/2/1.png"
+                    src="/img/masthead/cat1.jpg"
                     alt="image"
                     className="js-mouse-move"
                   />
@@ -81,7 +81,7 @@ const Index = () => {
 
                 <div data-aos="fade" data-aos-delay="600">
                   <img
-                    src="/img/masthead/2/2.png"
+                    src="/img/masthead/cat2.jpg"
                     alt="image"
                     className="js-mouse-move"
                   />
@@ -90,7 +90,7 @@ const Index = () => {
 
                 <div data-aos="fade" data-aos-delay="800">
                   <img
-                    src="/img/masthead/2/3.png"
+                    src="/img/masthead/pet.jpg"
                     alt="image"
                     className="js-mouse-move"
                   />

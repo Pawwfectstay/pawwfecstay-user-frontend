@@ -1,9 +1,14 @@
 const OthersFilter = () => {
-  const others = [{ name: "Free Cancellation", count: 92 }];
+  const petTypes = [
+    { name: "Dogs", count: 45 },
+    { name: "Cats", count: 38 },
+    { name: "Small Animals", count: 15 },
+    { name: "Birds", count: 8 },
+  ];
   return (
     <>
-      {others.map((item, index) => (
-        <div className="row y-gap-10 items-center justify-between" key={index}>
+      {petTypes.map((item) => (
+        <div className="row y-gap-10 items-center justify-between" key={item.name}>
           <div className="col-auto">
             <div className="form-checkbox d-flex items-center">
               <input type="checkbox" />

@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { destinations3 } from "../../../data/desinations";
+import { petFacilities } from "../../../data/petFacilities";
 import { Link } from "react-router-dom";
 
-const Travellers = () => {
+const Facilities = () => {
   return (
     <div className="pt-40 overflow-hidden js-section-slider">
       <Swiper
@@ -34,7 +34,7 @@ const Travellers = () => {
           },
         }}
       >
-        {destinations3.map((item) => (
+        {petFacilities.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
               to="/tour-list-v2"
@@ -42,11 +42,11 @@ const Travellers = () => {
               data-aos="fade"
               data-aos-delay={item.delayAnimation}
             >
-              <div className="citiesCard__image rounded-4 ratio ratio-3:4">
+              <div className="citiesCard__image rounded-4 ratio ratio-1:1">
                 <img
                   className="img-ratio rounded-4 js-lazy"
                   src={item.img}
-                  alt="image"
+                  alt={item.title}
                 />
               </div>
               <div className="citiesCard__content mt-10">
@@ -54,7 +54,7 @@ const Travellers = () => {
                   {item.title}
                 </h4>
                 <div className="text-14 text-light-1">
-                  {item.travellers} travellers
+                  {item.features}
                 </div>
               </div>
             </Link>
@@ -65,4 +65,4 @@ const Travellers = () => {
   );
 };
 
-export default Travellers;
+export default Facilities;

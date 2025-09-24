@@ -10,10 +10,10 @@ const CallToActions = () => {
               </div>
               <div className="col-auto">
                 <h4 className="text-26 text-white fw-600">
-                  Your Travel Journey Starts Here
+                  Never Miss Pet Care Deals
                 </h4>
                 <div className="text-white">
-                  Sign up and we`&apos;ll send the best deals to you
+                  Subscribe for exclusive offers and updates from top pet boarding facilities.
                 </div>
               </div>
             </div>

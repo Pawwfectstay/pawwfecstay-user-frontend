@@ -6,7 +6,7 @@ const Subscribe = () => {
           <div className="col-xl-5 px-0">
             <img
               className="col-12 h-400"
-              src="/img/newsletter/1.png"
+              src="/img/newsletter/cat3.jpg"
               alt="image"
             />
           </div>
@@ -16,10 +16,10 @@ const Subscribe = () => {
             <div className="d-flex justify-center flex-column h-400 px-80 py-40 md:px-30 bg-light-2">
               <div className="icon-newsletter text-60 sm:text-40 text-dark-1" />
               <h2 className="text-30 sm:text-24 lh-15 mt-20">
-                Your Travel Journey Starts Here
+                Give Your Pets the Care They Deserve
               </h2>
               <p className="text-dark-1 mt-5">
-                Sign up and we&apos;ll send the best deals to you
+                Subscribe for exclusive pet care offers and updates from top facilities in KL & Selangor
               </p>
 
               <div className="single-field -w-410 d-flex x-gap-10 flex-wrap y-gap-20 pt-30">

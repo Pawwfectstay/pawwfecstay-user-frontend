@@ -1,18 +1,18 @@
 const CategoryTypes = () => {
-  const categories = [
-    { name: "Tours", count: 92 },
-    { name: "Attractions", count: 45 },
-    { name: "Day Trips", count: 21 },
-    { name: "Outdoor Activities", count: 78 },
-    { name: "Concerts & Shows", count: 679 },
+  const roomTypes = [
+    { name: "Basic Room", count: 15 },
+    { name: "Premium Suite", count: 8 },
+    { name: "Luxury Suite", count: 5 },
+    { name: "Cat Condo", count: 12 },
+    { name: "Group Play Area", count: 6 },
   ];
 
   return (
     <>
-      {categories.map((category) => (
+      {roomTypes.map((type) => (
         <div
           className="row y-gap-10 items-center justify-between"
-          key={category.name}
+          key={type.name}
         >
           <div className="col-auto">
             <div className="form-checkbox d-flex items-center">
@@ -20,11 +20,11 @@ const CategoryTypes = () => {
               <div className="form-checkbox__mark">
                 <div className="form-checkbox__icon icon-check" />
               </div>
-              <div className="text-15 ml-10">{category.name}</div>
+              <div className="text-15 ml-10">{type.name}</div>
             </div>
           </div>
           <div className="col-auto">
-            <div className="text-15 text-light-1">{category.count}</div>
+            <div className="text-15 text-light-1">{type.count}</div>
           </div>
         </div>
       ))}

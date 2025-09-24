@@ -1,40 +1,63 @@
 import { useState } from "react";
 
-const LocationSearch = () => {
+const LocationSearch = ({ onLocationSelect }) => {
   const [searchValue, setSearchValue] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
 
   const locationSearchContent = [
     {
       id: 1,
-      name: "London",
-      address: "Greater London, United Kingdom",
+      name: "Pet Safari - Sunway Pyramid",
+      address: "F1.01A, First Floor, Sunway Pyramid, Bandar Sunway, 47500 Petaling Jaya, Selangor",
     },
     {
       id: 2,
-      name: "New York",
-      address: "New York State, United States",
+      name: "Pet Lovers Centre - Mid Valley Megamall",
+      address: "Lot T-012A, 3rd Floor, Mid Valley Megamall, Lingkaran Syed Putra, 59200 Kuala Lumpur",
     },
     {
       id: 3,
-      name: "Paris",
-      address: "France",
+      name: "Animal Medical Centre",
+      address: "26, Jalan SS 2/103, SS 2, 47300 Petaling Jaya, Selangor",
     },
     {
       id: 4,
-      name: "Madrid",
-      address: "Spain",
+      name: "Pets Wonderland - Bangsar",
+      address: "29, Jalan Telawi 3, Bangsar Baru, 59100 Kuala Lumpur",
     },
     {
       id: 5,
-      name: "Santorini",
-      address: "Greece",
+      name: "Healing Pets Animal Clinic",
+      address: "30, Jalan SS 21/35, Damansara Utama, 47400 Petaling Jaya, Selangor",
     },
+    {
+      id: 6,
+      name: "Paws & Claws Veterinary Clinic",
+      address: "G-7, Plaza Damas 3, 63, Jalan Sri Hartamas 1, 50480 Kuala Lumpur",
+    },
+    {
+      id: 7,
+      name: "Pet Family Veterinary Clinic",
+      address: "19, Jalan PJU 5/20D, Kota Damansara, 47810 Petaling Jaya, Selangor",
+    },
+    {
+      id: 8,
+      name: "Petzone Veterinary Clinic",
+      address: "32G, Jalan Radin Anum 1, Sri Petaling, 57000 Kuala Lumpur",
+    }
   ];
 
   const handleOptionClick = (item) => {
     setSearchValue(item.name);
     setSelectedItem(item);
+    onLocationSelect?.({ name: item.name });
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchValue(value);
+    setSelectedItem(null);
+    onLocationSelect?.({ name: value });
   };
 
   return (
@@ -50,10 +73,10 @@ const LocationSearch = () => {
             <input
               autoComplete="off"
               type="search"
-              placeholder="Where are you go?"
+              placeholder="Find a pet boarding near you"
               className="js-search js-dd-focus"
               value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
+              onChange={handleInputChange}
             />
           </div>
         </div>

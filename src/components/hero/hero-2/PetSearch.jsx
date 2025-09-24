@@ -52,7 +52,7 @@ const PetCounter = ({ name, description, count, onCountChange }) => {
   );
 };
 
-const GuestSearch = () => {
+const PetSearch = () => {
   const [petCounts, setPetCounts] = useState({
     Cats: 0,
     Dogs: 0,
@@ -116,4 +116,4 @@ const GuestSearch = () => {
   );
 };
 
-export default GuestSearch;
+export default PetSearch;

@@ -1,10 +1,16 @@
+import { useLocation } from 'react-router-dom';
+
 const TopHeaderFilter = () => {
+  const location = useLocation();
+  const searchResults = location.state?.searchResults || [];
+  const searchParams = location.state?.searchParams || {};
   return (
     <>
       <div className="row y-gap-10 items-center justify-between">
         <div className="col-auto">
           <div className="text-18">
-            <span className="fw-500">3,269 properties</span> in Europe
+            <span className="fw-500">{searchResults.length} properties</span>
+            {searchParams.location && ` in ${searchParams.location}`}
           </div>
         </div>
         {/* End .col */}
